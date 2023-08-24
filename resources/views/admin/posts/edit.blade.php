@@ -45,6 +45,17 @@
                         @enderror
                     </div>
                     <div class="form-group mt-4">
+                        <select name="category_id" id="category_id" class="form-control  @error('category_id')is_invalid @enderror">
+                            <option value="">Seleziona categoria...</option>
+                            @foreach($categories as $category)
+                                <option {{$category->id==old('category_id',$post->category_id) ? 'selected': ''}} value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                        @error('category_id')
+                            <div class="text-danger">{{$message}}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group mt-4">
                         
                         <textarea class="form-control" name="content" id="content" placeholder="Contenuto">{{old('content') ?? $post->content }}</textarea>
                     </div>
