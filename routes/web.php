@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\PostController as PostController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/dashboard', function () {
