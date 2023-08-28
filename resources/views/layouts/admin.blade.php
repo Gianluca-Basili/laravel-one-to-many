@@ -43,6 +43,12 @@
                                     </a>
                                     
                                 </li>
+                                <li >
+                                    <a class="nav-link text-white {{Route::currentRouteName() == 'admin.categories.index' ? 'bg-secondary' : ''}}" href="{{route('admin.categories.index')}}">
+                                    <i class="fa-solid fa-signs-post mx-2">category</i>
+                                    </a>
+                                    
+                                </li>
                                
                             </ul>
                         </header>
